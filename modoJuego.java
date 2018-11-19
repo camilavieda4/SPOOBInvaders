@@ -27,7 +27,7 @@ public class modoJuego extends JPanel{
 	private JLabel encabezado;
 	private JLabel muñecoOne;
 	private JLabel muñecoTwo;
-	Game p;
+	//Game p;
 	
 	
 	
@@ -121,7 +121,8 @@ public class modoJuego extends JPanel{
 	private void accionJugar(String modo) {
 		
 		Main.sp.getContentPane().removeAll();
-		Main.sp.getContentPane().add(new Game(modo),BorderLayout.CENTER);
+		//Llama a la nave para que se cree 
+		Main.sp.getContentPane().add(new NaveGUI(),BorderLayout.CENTER);
 		Main.sp.repaint();
 		Main.sp.validate();
 		
