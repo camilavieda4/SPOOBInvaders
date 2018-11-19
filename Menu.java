@@ -34,6 +34,8 @@ public class Menu extends JPanel{
 	private JButton help;
 	private JButton exit;
 	private JLabel logo;
+	public static Clip sonido;
+	
 	
 	public Menu() {
 		
@@ -48,9 +50,17 @@ public class Menu extends JPanel{
 		//Quitar el BorderLayout
 		setLayout(null);
 		//Preparando los botones del menu
-		prepararBotones() ;
 		
-	}
+		try {
+			sonido=AudioSystem.getClip();
+			sonido.open(AudioSystem.getAudioInputStream(getClass().getResource("/Resources/intro.wav")));
+			sonido.loop(Clip.LOOP_CONTINUOUSLY);
+		}
+		catch(Exception e) {
+		}
+		prepararBotones() ;
+		}
+		
 	
 	private void prepararBotones() {
 		ImageIcon spaceLogo= new ImageIcon(getClass().getResource("/Resources/space-invaders-logo.png"));
@@ -152,7 +162,6 @@ public class Menu extends JPanel{
 	
 	private void accionJugar() {
 		Main.sp.getContentPane().removeAll();
-		
 		Main.sp.getContentPane().add(new modoJuego(),BorderLayout.CENTER);
 		Main.sp.validate();
 		
