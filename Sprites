@@ -1,0 +1,18 @@
+package Presentacion;
+
+import java.awt.image.BufferedImage;
+import java.awt.Image;
+
+public class Sprites {
+private Image image;
+	
+	public Sprites(Image image){
+		this.image = image;
+	}
+	
+	public Image grabImage(int col, int row, int width, int height){
+		Image img = ((BufferedImage) image).getSubimage(col, row, width, height);
+		return img;
+	}
+
+}
