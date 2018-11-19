@@ -1,29 +1,3 @@
-package Presentacion;
-import javax.swing.*;
-import javax.swing.event.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.util.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.io.File;
-import java.awt.GridLayout.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.geom.*;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
-import javax.swing.Timer;
-import java.awt.Container;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-
 public class SpaceInvaderGUI extends JFrame {
 	
 	public static Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
@@ -75,4 +49,36 @@ public class SpaceInvaderGUI extends JFrame {
 		}
 		
 		}
-  }
+
+	/*public static void main(String[] args) {
+		SpaceInvaderGUI sp = new SpaceInvaderGUI();
+		sp.setVisible(true);
+		
+	}*/
+	
+	/*public void grid() {
+		grilleta=new JPanel();
+		grilleta.setBorder(BorderFactory.createLineBorder(Color.BLACK,3));
+        grilleta.setLayout(new  GridLayout(7,7,3,3));
+        grilleta.setBackground(Color.BLACK);
+        add(grilleta,BorderLayout.CENTER);
+		
+		
+	} */
+	/*public void paintComponent (Graphics g) {
+		super.paintComponents(g);
+		drawing(g);
+		Toolkit.getDefaultToolkit();
+	}
+	
+	
+	
+	public void drawing(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.drawImage(naveImagen,70,50,this);
+		setAdequateTargetImage(1);
+		
+	}*/
+	
+
+}
